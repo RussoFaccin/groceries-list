@@ -23,11 +23,6 @@ export class AddItemPage {
   ionViewDidLoad() {}
   onAddNew() {
     this.data.saveData(this.item);
-    // let alert = this.alertCtrl.create({
-    //   title: 'Add New Item',
-    //   subTitle: JSON.stringify(this.item),
-    //   buttons: ['Ok']
-    // });
-    // alert.present();
+    this.navCtrl.pop();
   }
 }

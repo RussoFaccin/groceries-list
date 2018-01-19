@@ -36,4 +36,10 @@ export class ItemListPage {
   onAddNewItem() {
     this.navCtrl.push(AddItemPage);
   }
+  onAddToBasket(item: any) {
+    item.isInBasket = true;
+  }
+  onDeleteItem(item: any) {
+    this.items.splice(item, 1);
+  }
 }

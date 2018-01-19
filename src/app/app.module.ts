@@ -9,6 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { ItemListPage } from '../pages/item-list/item-list';
 import { AddItemPage } from '../pages/add-item/add-item';
 import { AddNewDialogPage } from '../pages/add-new-dialog/add-new-dialog';
+//Components
+import { AddNewDialogComponent } from '../components/add-new-dialog/add-new-dialog';
 // Providers
 import { DataProvider } from '../providers/data/data';
 // Storage
@@ -20,7 +22,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     ItemListPage,
     AddItemPage,
-    AddNewDialogPage
+    AddNewDialogPage,
+    AddNewDialogComponent
   ],
   imports: [
     BrowserModule,
