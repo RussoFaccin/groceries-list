@@ -6,10 +6,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 // Pages
 import { HomePage } from '../pages/home/home';
-import { ItemListPage } from '../pages/item-list/item-list';
 import { AddItemPage } from '../pages/add-item/add-item';
 //Components
 import { AddNewDialogComponent } from '../components/add-new-dialog/add-new-dialog';
+import { ItemListComponent } from '../components/item-list/item-list';
 // Providers
 import { DataProvider } from '../providers/data/data';
 // Storage
@@ -19,9 +19,9 @@ import { IonicStorageModule } from '@ionic/storage';
   declarations: [
     MyApp,
     HomePage,
-    ItemListPage,
     AddItemPage,
-    AddNewDialogComponent
+    AddNewDialogComponent,
+    ItemListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +35,9 @@ import { IonicStorageModule } from '@ionic/storage';
   entryComponents: [
     MyApp,
     HomePage,
-    ItemListPage,
     AddItemPage,
-    AddNewDialogComponent
+    AddNewDialogComponent,
+    ItemListComponent
   ],
   providers: [
     StatusBar,

@@ -19,6 +19,9 @@ export class DataProvider {
       });
     });
   }
+  save() {
+    this.storage.set("items", this.items);
+  }
   saveData(item: GroceryItem) {
     if (this.items == undefined) {
       this.items = [item];
@@ -27,7 +30,19 @@ export class DataProvider {
     }
     this.storage.set("items", this.items);
   }
+  updateData(data: any, key: number) {
+    this.items[key] = data;
+    this.save();
+    
+  }
+  deleteData(key: any) {
+    this.items.splice(key, 1);
+    this.save();
+    
+    // this.storage.set("items", this.items);
+  }
   deleteAll() {
     this.storage.clear();
+    this.items = null;
   }
 }
