@@ -10,6 +10,7 @@ import { AddItemPage } from '../pages/add-item/add-item';
 //Components
 import { AddNewDialogComponent } from '../components/add-new-dialog/add-new-dialog';
 import { ItemListComponent } from '../components/item-list/item-list';
+import { AllInBasketComponent } from '../components/all-in-basket/all-in-basket';
 // Providers
 import { DataProvider } from '../providers/data/data';
 // Storage
@@ -21,7 +22,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     AddItemPage,
     AddNewDialogComponent,
-    ItemListComponent
+    ItemListComponent,
+    AllInBasketComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { IonicStorageModule } from '@ionic/storage';
     HomePage,
     AddItemPage,
     AddNewDialogComponent,
-    ItemListComponent
+    ItemListComponent,
+    AllInBasketComponent
   ],
   providers: [
     StatusBar,
