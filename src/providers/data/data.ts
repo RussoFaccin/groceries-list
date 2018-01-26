@@ -28,6 +28,6 @@ export class DataProvider {
     this.storage.set("items", this.items);
   }
   deleteAll() {
-
+    this.storage.clear();
   }
 }

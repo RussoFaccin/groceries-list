@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { IonicPage, NavController, NavParams } from "ionic-angular";
+import { IonicPage, NavController, NavParams, AlertController } from "ionic-angular";
 
 // Pages
 import { AddItemPage } from "../add-item/add-item";
@@ -24,7 +24,8 @@ export class ItemListPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private data: DataProvider
+    public data: DataProvider,
+    private alertCtrl: AlertController
   ) {
     this.items = this.navParams.get("data");
   }
@@ -41,5 +42,19 @@ export class ItemListPage {
   }
   onDeleteItem(item: any) {
     this.items.splice(item, 1);
+  }
+  onDeleteAll() {
+    let alert = this.alertCtrl.create({
+      title: 'Confirmation',
+      subTitle: 'Deseja realmente excluir TODOS os itens?',
+      buttons: [
+        {text: 'Cancel'},
+        {text: 'Delete ALL', handler: this.deleteAllItems.bind(this)}
+      ]
+    });
+    alert.present();
+  }
+  deleteAllItems() {
+    this.data.deleteAll();
   }
 }

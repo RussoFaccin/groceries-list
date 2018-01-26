@@ -5,8 +5,8 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<add-new-dialog></add-new-dialog>
-<ion-content padding>
+<ion-content>
+  <add-new-dialog *ngIf="this.data.items == null" (click)="onClickDialog()"></add-new-dialog>
   The world is your oyster.
   <p>
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.

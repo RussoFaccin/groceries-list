@@ -2,11 +2,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ItemListPage } from '../item-list/item-list';
-import { AddNewDialogPage } from '../add-new-dialog/add-new-dialog';
-//Component
+import { AddItemPage } from "../add-item/add-item";
+
+//Components
 import { AddNewDialogComponent } from '../../components/add-new-dialog/add-new-dialog';
 
-// Provider
+// Providers
 import { DataProvider } from '../../providers/data/data';
 
 @Component({
@@ -14,17 +15,21 @@ import { DataProvider } from '../../providers/data/data';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  constructor(public navCtrl: NavController, private data: DataProvider) {
+  constructor(
+    public navCtrl: NavController, 
+    public data: DataProvider
+  ) {
   }
   ionViewDidEnter() {
-    console.log('DATA: ', this.data.data);
     this.data.getData().then((result) => {
       if (result == undefined) {
-        this.navCtrl.push(AddNewDialogPage);
       }else{
         this.navCtrl.push(ItemListPage, {data: this.data.data});
       }
     });
+  }
+  onClickDialog() {
+    this.navCtrl.push(AddItemPage);
   }
 
 }
