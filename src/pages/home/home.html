@@ -9,7 +9,7 @@
       <ion-title>Grocery List</ion-title>
     </ion-navbar>
   </ion-header>
-<ion-content>
+<ion-content padding>
   <add-new-dialog *ngIf="this.data.items == undefined" (click)="onClickDialog()"></add-new-dialog>
   <item-list></item-list>
 </ion-content>

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { AddNewDialogComponent } from './add-new-dialog/add-new-dialog';
 import { ItemListComponent } from './item-list/item-list';
+import { AllInBasketComponent } from './all-in-basket/all-in-basket';
 @NgModule({
 	declarations: [AddNewDialogComponent,
-    ItemListComponent],
+    ItemListComponent,
+    AllInBasketComponent],
 	imports: [],
 	exports: [AddNewDialogComponent,
-    ItemListComponent]
+    ItemListComponent,
+    AllInBasketComponent]
 })
 export class ComponentsModule {}
