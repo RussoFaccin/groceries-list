@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataProvider } from '../../providers/data/data';
+import { ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the AllInBasketComponent component.
@@ -14,9 +16,13 @@ export class AllInBasketComponent {
 
   text: string;
 
-  constructor() {
-    console.log('Hello AllInBasketComponent Component');
-    this.text = 'Hello World';
+  constructor(
+    private data: DataProvider,
+    public viewCtrl: ViewController
+  ) {}
+  dismiss() {
+    this.data.items = null;
+    this.data.deleteAll();
+    this.viewCtrl.dismiss();
   }
-
 }

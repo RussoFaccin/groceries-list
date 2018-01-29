@@ -14,9 +14,6 @@ export class AddNewDialogComponent {
 
   text: string;
 
-  constructor() {
-    console.log('Hello AddNewDialogComponent Component');
-    this.text = 'Hello World';
-  }
+  constructor() {}
 
 }

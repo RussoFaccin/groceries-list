@@ -23,13 +23,6 @@ export class HomePage {
   }
   ionViewDidEnter() {
     this.data.getData();
-    // console.log('DATA:', this.data.items)
-    // this.data.getData().then((result) => {
-    //   if (result == undefined) {
-    //   }else{
-    //     this.navCtrl.push(ItemListPage, {data: this.data.data});
-    //   }
-    // });
   }
   onClickDialog() {
     this.navCtrl.push(AddItemPage);

@@ -18,10 +18,7 @@ export class ItemListComponent {
   constructor(
     public data: DataProvider,
     public modalCtrl: ModalController
-  ) {
-    console.log('Hello ItemListComponent Component');
-    this.text = 'Hello World';
-  }
+  ) {}
   onAddToBasket(item: any, index: number) {
     item.isInBasket = true;
     this.data.updateData(item, index);
